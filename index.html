@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Basic" Algorithm Challenges Using Javascript</title>
+</head>
+<body>
+    <h1>"Basic" Algorithm Challenges Using Javascript, All 12 in Number</h1>
+
+    <button id="btn">Printing From 1 to 255 </button>
+    <button id="btn1">Printing Integer and Sum 0 to 255</button>
+    <button id="btn2">Printing maximum of array</button>
+    <button id="btn3">Printing return odds array from 1-255</button>
+    <button id="btn4">Printing return array count greater than Y</button>
+    <button id="btn5">Printing Maximum Minimum Average array Value </button>
+    <button id="btn6">Swapping String for Array Negative Values</button>
+    <button id="btn7">Printing Odds from 1-255 </button>
+    <button id="btn8">Printing array Values</button>
+    <button id="btn9">Printing Average of array</button>
+    <button id="btn10">Printing square array values</button>
+    <button id="btn11">zeroing out array Negative values</button>
+
+    <ul id= "theList" ></ul>
+
+
+    <script>
+
+        let btn = document.getElementById("btn");
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let btn4 = document.getElementById("btn4");
+        let btn5 = document.getElementById("btn5");
+        let btn6 = document.getElementById("btn6");
+        let btn7 = document.getElementById("btn7");
+        let btn8 = document.getElementById("btn8");
+        let btn9 = document.getElementById("btn9");
+        let btn10 = document.getElementById("btn10");
+        let btn11 = document.getElementById("btn11");
+
+        let ul = document.getElementById("theList");
+
+
+        btn.addEventListener("click", print1To255);
+        btn1.addEventListener("click", printIntAndSum0T0255);
+        btn2.addEventListener("click", printMaxOfArray);
+        btn3.addEventListener("click", returnOddsArray1To255);
+        btn4.addEventListener("click", returnArrayCountGreaterThanY);
+        btn5.addEventListener("click", printMaxMinAverageArrayVals);
+        btn6.addEventListener("click", swapStringForArrayNegativeVals);
+        btn7.addEventListener("click", printOdds1To255);
+        btn8.addEventListener("click", printArrayVals);
+        btn9.addEventListener("click", printAverageofArray);
+        btn10.addEventListener("click", printSqareArrayVals);
+        btn11.addEventListener("click", zeroOutArrayNegativeVals);
+
+
+
+        function print1To255() {
+            let num = new Array (255);
+            for (let i = 1; i<256; i++)
+            {
+                document.write( + i +`<br/>`);
+            }
+        }
+
+        function printIntAndSum0T0255() {
+            let data = new Array (255);
+            let sum = 0
+            for (let i = 0; i <=255; i++) {
+               sum += i;
+           document.write ( i );
+        }
+        document.write (sum [i] );
+     }
+       
+        function printMaxOfArray() {
+            let max = 0;
+            let total = new Array (255);
+
+            for(let i = 0; i <= total.length; i++){
+
+               if (i > max) {
+                   max = total.length;
+               }
+               document.write(`The maximum number is:` + max);
+            }
+        }
+
+        function returnOddsArray1To255() {}
+
+
+        function returnArrayCountGreaterThanY(arr, y) {
+            let num = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > y) {num++; }
+            }
+            document.write(num, y);
+        }
+
+        function printMaxMinAverageArrayVals(arr) {
+            let sum = arr[0];
+            if (arr.length == 0) {
+                document.write("No return");
+                return;
+            }
+            let max = arr[0];
+            let min = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {max = arr[i];}
+                if (arr[i] < min) {min = arr[i];}
+                sum += arr[i];
+            }
+            document.write(+ max + min);
+
+        }
+    
+        function swapStringForArrayNegativeVals(arr) 
+        {
+            let num = new Array (255);
+            for (let i =0; i < arr.length; i++)
+        {
+            if (arr[i] < 0)
+            {
+                arr[i] = "codebits";
+            }
+        }
+        return arr;
+        }
+
+        function printOdds1To255() {
+            let num = new Array (255);
+        
+            for (let i = 1; i <=255; i++)
+            {
+                if (i % 2 != 0);
+            }
+            document.write(i);
+        }
+        
+        function printArrayVals(arr) {
+            let value = 0;
+        }
+
+        function printAverageofArray(arr) {
+
+        }
+
+        function printSqareArrayVals(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = arr[i] * arr[i];
+            }
+            return arr;
+        }
+
+        function zeroOutArrayNegativeVals(arr) {
+            for (let i = 0; i < arr.length; i++)
+        
+            if (arr[i] < 0)
+            
+                arr[i] = 0;
+                return arr;
+            }
+          
+    
+
+    </script>
+
+    
+</body>
+</html>
