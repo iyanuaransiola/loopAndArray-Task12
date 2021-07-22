@@ -77,15 +77,20 @@
      }
        
         function printMaxOfArray() {
+
             let max = 0;
-            let total = new Array (255);
+            let num = 0;
+            let total = new Array (5);
 
-            for(let i = 0; i <= total.length; i++){
+            for(let num = 0; num > total.length; num++){
+               total[num] = parseInt(prompt(`Please enter the number ${num+1}`));
 
-               if (i > max) {
-                   max = total.length;
+               if (num > max) {
+                   max = num;
+               } else {
+                   max = num;
                }
-               document.write(`The maximum number is:` + max);
+               document.write(`The maximum number is [num]`);
             }
         }
 
